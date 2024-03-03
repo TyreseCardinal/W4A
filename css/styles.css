@@ -1,0 +1,268 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  width: auto;
+  margin: 0px;
+}
+
+header {
+  color: #16416b;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: navy;
+  color: #fff;
+  text-align: center;
+}
+
+a {
+  width: auto;
+}
+
+/* Header Styling */
+
+/* Phone */
+@media screen and (max-width: 768px) {
+  #header-container {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width:769px) {
+  #header-container {
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+  }
+}
+
+#header-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 1rem;
+  border: 2px solid black
+}
+
+#header-container>img {
+  padding: 1em;
+}
+
+/* Main Styling */
+#card-container {
+  display: grid;
+  justify-items: center;
+  align-self: center;
+  padding: 2em;
+  gap: 2rem;
+}
+
+.card {
+  display: grid;
+  border: 2px solid black;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Meet The Team (Phone) */
+@media screen and (max-width: 768px) {
+  #card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .card>p {
+    display: none;
+  }
+}
+
+/* Meet The Team (Tablet) */
+@media screen and (min-width:768px) and (max-width:1000px) {
+  #card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Meet The Team (Desktop) */
+@media screen and (min-width:1000px) {
+  #card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Product Cards (Mobile and Tablet) */
+@media screen and (max-width:1000px) {
+  #product-container {
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* Product Cards (Desktop) */
+@media screen and (min-width:1000px) {
+  #product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #product-2 {
+    display: grid;
+  }
+
+  #product-2-img {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: -1;
+    grid-row-end: 2;
+  }
+
+  #product-2-p {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+}
+
+#product-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.product-card {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 1em;
+  padding: 1em;
+}
+
+
+#products {
+  display: grid;
+  justify-items: center;
+  margin-top: 2em;
+}
+
+
+
+/* Footer Styling */
+#column-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: max-content;
+  max-height: max-content;
+}
+
+#column-1 {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+#column-2 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0;
+  padding: 2em;
+}
+
+#column-3 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* Column Container (Phone) */
+@media screen and (max-width:768px) {
+  #column-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* Column Container (Tablet) */
+@media screen and (min-width:768px) and (max-width:1000px) {
+  #column-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width:1000px) {
+  #column-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Newsletter Styling */
+.subscribe-container {
+  text-align: center;
+}
+
+.subscribe-input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.subscribe-button {
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  cursor: not-allowed;
+}
